@@ -1,0 +1,478 @@
+.add-employee-page {
+  min-height: 100%;
+  padding: 24px;
+  color: #ffffff;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.add-employee-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.add-employee-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.add-employee-title-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(13, 110, 253, 0.18);
+  border: 1px solid rgba(110, 168, 254, 0.25);
+
+  color: #6ea8fe;
+  font-size: 21px;
+
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+}
+
+.add-employee-title h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.add-employee-title p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+}
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.back-employee-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 15px;
+
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 13px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.back-employee-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* ================================
+   GLASS CARD
+================================ */
+
+.add-employee-card {
+  width: 100%;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.065);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   FORM SECTION
+================================ */
+
+.form-section {
+  margin-bottom: 28px;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 10px;
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-section-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: rgba(13, 110, 253, 0.14);
+  color: #6ea8fe;
+
+  font-size: 17px;
+}
+
+.form-section-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form-section-header p {
+  margin: 3px 0 0;
+
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+/* ================================
+   FORM GRID
+================================ */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.form-group {
+  min-width: 0;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ================================
+   LABEL
+================================ */
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-group label span {
+  margin-left: 3px;
+  color: #ff8585;
+}
+
+/* ================================
+   INPUT
+================================ */
+
+.custom-input {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+
+  background: rgba(255, 255, 255, 0.055);
+
+  transition: 0.2s ease;
+}
+
+.custom-input i {
+  width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 14px;
+}
+
+.custom-input input,
+.custom-input select {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  padding: 0 12px 0 2px;
+}
+
+.custom-input input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-input select {
+  cursor: pointer;
+}
+
+.custom-input select option {
+  background: #172235;
+  color: #ffffff;
+}
+
+.custom-input:focus-within {
+  border-color: rgba(110, 168, 254, 0.65);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.08);
+}
+
+.custom-input:focus-within i {
+  color: #6ea8fe;
+}
+
+/* ================================
+   TEXTAREA
+================================ */
+
+.custom-textarea {
+  min-height: 85px;
+
+  display: flex;
+  align-items: flex-start;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.custom-textarea i {
+  width: 42px;
+
+  padding-top: 13px;
+
+  display: flex;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-textarea textarea {
+  width: 100%;
+
+  min-height: 85px;
+
+  padding: 12px 12px 12px 2px;
+
+  border: none;
+  outline: none;
+
+  resize: vertical;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.custom-textarea textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-textarea:focus-within {
+  border-color: rgba(110, 168, 254, 0.65);
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.add-employee-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 15px;
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(220, 53, 69, 0.12);
+
+  border: 1px solid rgba(220, 53, 69, 0.2);
+
+  color: #ff8f8f;
+
+  font-size: 12px;
+}
+
+/* ================================
+   ACTIONS
+================================ */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 25px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cancel-employee-btn,
+.save-employee-btn {
+  height: 40px;
+
+  padding: 0 17px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancel-employee-btn {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cancel-employee-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+}
+
+.save-employee-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #6f42c1
+  );
+
+  color: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+.save-employee-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 11px 25px rgba(13, 110, 253, 0.3);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .add-employee-page {
+    padding: 16px;
+  }
+
+  .add-employee-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-employee-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .add-employee-page {
+    padding: 12px;
+  }
+
+  .add-employee-title h1 {
+    font-size: 21px;
+  }
+
+  .add-employee-card {
+    padding: 16px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-employee-btn,
+  .save-employee-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+} 

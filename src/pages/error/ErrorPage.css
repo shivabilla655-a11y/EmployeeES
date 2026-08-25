@@ -1,0 +1,601 @@
+/* ========================================
+   ERROR PAGE
+======================================== */
+
+.error-page {
+    min-height: 100dvh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    padding: 18px;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(13,110,253,.20), transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(111,66,193,.20), transparent 30%),
+        linear-gradient(135deg,#07111f,#0d1b2a 50%,#111827);
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.error-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(600px, 100%);
+
+    padding: 25px 40px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 26px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.40),
+        inset 0 1px 1px rgba(255, 255, 255, 0.10);
+
+    animation:
+        errorCardAppear 0.7s ease forwards;
+}
+
+
+/* ========================================
+   404 NUMBER
+======================================== */
+
+.error-number-wrapper {
+    position: relative;
+
+    display: inline-block;
+}
+
+
+.error-number {
+    position: relative;
+
+    z-index: 2;
+
+    color: transparent;
+
+    font-size: clamp(90px, 15vw, 150px);
+
+    line-height: 0.9;
+
+    font-weight: 800;
+
+    letter-spacing: -8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6ea8fe,
+            #0d6efd,
+            #8b5cf6
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation:
+        numberFloat 3s ease-in-out infinite;
+}
+
+
+.error-glow {
+    position: absolute;
+
+    width: 180px;
+    height: 80px;
+
+    left: 50%;
+    bottom: -10px;
+
+    transform: translateX(-50%);
+
+    background:
+        rgba(13, 110, 253, 0.35);
+
+    filter: blur(35px);
+
+    animation:
+        glowPulse 2.5s ease-in-out infinite;
+}
+
+
+/* ========================================
+   ERROR ICON
+======================================== */
+
+.error-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 25px auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: #6ea8fe;
+
+    font-size: 22px;
+
+    background:
+        rgba(13, 110, 253, 0.12);
+
+    border:
+        1px solid rgba(110, 168, 254, 0.25);
+
+    box-shadow:
+        0 10px 30px rgba(13, 110, 253, 0.12);
+
+    animation:
+        iconFloat 3s ease-in-out infinite;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.error-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.error-description {
+    max-width: 470px;
+
+    margin: 12px auto 0;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.error-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+.error-actions button {
+    height: 44px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.error-back-button {
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color:
+        rgba(255, 255, 255, 0.75);
+}
+
+
+.error-back-button:hover {
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   DASHBOARD BUTTON
+======================================== */
+
+.error-dashboard-button {
+    border: none;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d6efd,
+            #6f42c1
+        );
+
+    box-shadow:
+        0 10px 25px rgba(13, 110, 253, 0.25);
+}
+
+
+.error-dashboard-button:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(13, 110, 253, 0.35);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.error-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 30px;
+
+    color:
+        rgba(255, 255, 255, 0.30);
+
+    font-size: 11px;
+}
+
+
+.error-footer i {
+    color:
+        rgba(110, 168, 254, 0.60);
+}
+
+
+/* ========================================
+   BACKGROUND ORBS
+======================================== */
+
+.error-orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(2px);
+}
+
+
+.error-orb-one {
+    width: 300px;
+    height: 300px;
+
+    top: -120px;
+    left: -100px;
+
+    background:
+        rgba(13, 110, 253, 0.18);
+
+    animation:
+        orbFloatOne 8s ease-in-out infinite;
+}
+
+
+.error-orb-two {
+    width: 400px;
+    height: 400px;
+
+    right: -180px;
+    bottom: -180px;
+
+    background:
+        rgba(111, 66, 193, 0.18);
+
+    animation:
+        orbFloatTwo 10s ease-in-out infinite;
+}
+
+
+.error-orb-three {
+    width: 120px;
+    height: 120px;
+
+    right: 20%;
+    top: 15%;
+
+    background:
+        rgba(13, 110, 253, 0.10);
+
+    animation:
+        orbFloatThree 6s ease-in-out infinite;
+}
+
+
+/* ========================================
+   PARTICLES
+======================================== */
+
+.error-particle {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(110, 168, 254, 0.55);
+
+    box-shadow:
+        0 0 15px rgba(110, 168, 254, 0.45);
+
+    pointer-events: none;
+}
+
+
+.particle-one {
+    top: 20%;
+    left: 25%;
+
+    animation:
+        particleFloat 4s ease-in-out infinite;
+}
+
+
+.particle-two {
+    top: 70%;
+    left: 15%;
+
+    animation:
+        particleFloat 5s ease-in-out infinite 1s;
+}
+
+
+.particle-three {
+    top: 25%;
+    right: 20%;
+
+    animation:
+        particleFloat 4.5s ease-in-out infinite 0.5s;
+}
+
+
+.particle-four {
+    bottom: 18%;
+    right: 28%;
+
+    animation:
+        particleFloat 5s ease-in-out infinite 1.5s;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes errorCardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes numberFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+
+        transform:
+            translateX(-50%)
+            scale(0.9);
+    }
+
+    50% {
+        opacity: 0.75;
+
+        transform:
+            translateX(-50%)
+            scale(1.1);
+    }
+}
+
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+@keyframes orbFloatOne {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 25px);
+    }
+}
+
+
+@keyframes orbFloatTwo {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-30px, -25px);
+    }
+}
+
+
+@keyframes orbFloatThree {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-15px, 20px);
+    }
+}
+
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        opacity: 0.3;
+
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.9;
+
+        transform: translateY(-20px);
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 576px) {
+
+    .error-page {
+        padding: 20px 14px;
+    }
+
+    .error-content {
+        padding: 35px 20px;
+
+        border-radius: 20px;
+    }
+
+    .error-number {
+        font-size: 100px;
+
+        letter-spacing: -5px;
+    }
+
+    .error-content h1 {
+        font-size: 24px;
+    }
+
+    .error-description {
+        font-size: 13px;
+    }
+
+    .error-actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .error-actions button {
+        width: 100%;
+    }
+}

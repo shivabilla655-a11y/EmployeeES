@@ -1,0 +1,318 @@
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    padding: 20px 14px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(9, 29, 51, 0.96),
+            rgba(13, 24, 42, 0.96)
+        );
+
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        10px 0 35px rgba(0, 0, 0, 0.20);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow-y: auto;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 8px 22px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.sidebar-brand-icon {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(13, 110, 253, 0.25),
+            rgba(111, 66, 193, 0.25)
+        );
+
+    border: 1px solid rgba(110, 168, 254, 0.35);
+
+    color: #6ea8fe;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(13, 110, 253, 0.15);
+}
+
+
+.sidebar-brand-text {
+    min-width: 0;
+}
+
+
+.sidebar-brand-text h5 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.sidebar-brand-text span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 10px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.sidebar-menu {
+    flex: 1;
+
+    padding-top: 20px;
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.sidebar-section-title {
+    padding: 0 12px;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.sidebar-section-title:first-child {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   SIDEBAR LINK
+======================================== */
+
+.sidebar-link {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 12px;
+
+    margin-bottom: 4px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.sidebar-link i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    transition: color 0.2s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.sidebar-link:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-color: rgba(255, 255, 255, 0.06);
+
+    transform: translateX(2px);
+}
+
+
+/* ========================================
+   ACTIVE
+======================================== */
+
+.sidebar-link.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 110, 253, 0.25),
+            rgba(111, 66, 193, 0.20)
+        );
+
+    border-color:
+        rgba(110, 168, 254, 0.18);
+
+    box-shadow:
+        inset 3px 0 0 #4d91ff,
+        0 5px 15px rgba(13, 110, 253, 0.08);
+}
+
+
+.sidebar-link.active i {
+    color: #6ea8fe;
+}
+
+
+/* ========================================
+   BOTTOM SECTION
+======================================== */
+
+.sidebar-bottom {
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* ========================================
+   LOGOUT
+======================================== */
+
+.sidebar-logout {
+    font-family: inherit;
+
+    text-align: left;
+}
+
+.sidebar-logout:hover {
+    color: #ff8f8f;
+
+    background: rgba(220, 53, 69, 0.08);
+
+    border-color: rgba(220, 53, 69, 0.10);
+}
+
+.sidebar-logout:hover i {
+    color: #ff8f8f;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 250px;
+
+        transform: translateX(-100%);
+
+        transition: transform 0.3s ease;
+    }
+
+    /*
+       We will add the "sidebar-open"
+       class later when we create Navbar.
+    */
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+}

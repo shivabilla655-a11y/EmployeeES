@@ -1,0 +1,849 @@
+/* ========================================
+   DASHBOARD PAGE
+======================================== */
+
+.dashboard-page {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.dashboard-header p {
+    margin: 5px 0 0;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 13px;
+}
+
+.dashboard-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 11px;
+}
+
+.dashboard-date i {
+    color: #6ea8fe;
+}
+
+
+/* ========================================
+   STATISTICS
+======================================== */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+.stat-card {
+    min-width: 0;
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16),
+        inset 0 1px 1px rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(110, 168, 254, 0.20);
+}
+
+
+.stat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    font-size: 17px;
+}
+
+
+.employees-icon {
+    color: #6ea8fe;
+    background: rgba(13, 110, 253, 0.14);
+}
+
+.departments-icon {
+    color: #b197fc;
+    background: rgba(111, 66, 193, 0.14);
+}
+
+.positions-icon {
+    color: #74c0fc;
+    background: rgba(32, 107, 196, 0.14);
+}
+
+.users-icon {
+    color: #a5d8ff;
+    background: rgba(13, 202, 240, 0.10);
+}
+
+
+.stat-growth {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 4px 7px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.stat-growth.positive {
+    color: #7dd3a7;
+
+    background: rgba(25, 135, 84, 0.10);
+}
+
+
+.stat-content {
+    margin-top: 17px;
+}
+
+
+.stat-label {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 11px;
+}
+
+
+.stat-content h2 {
+    margin: 4px 0 2px;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.stat-description {
+    color: rgba(255, 255, 255, 0.30);
+
+    font-size: 10px;
+}
+
+
+/* ========================================
+   MIDDLE SECTION
+======================================== */
+
+.dashboard-middle {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   COMMON CARD
+======================================== */
+
+.dashboard-card {
+    min-width: 0;
+
+    padding: 20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16),
+        inset 0 1px 1px rgba(255, 255, 255, 0.06);
+}
+
+
+.dashboard-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.dashboard-card-header h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.dashboard-card-header p {
+    margin: 4px 0 0;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+}
+
+
+.card-header-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    color: #6ea8fe;
+
+    background:
+        rgba(13, 110, 253, 0.10);
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   SALARY
+======================================== */
+
+.salary-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+.salary-item {
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+
+.salary-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+}
+
+
+.salary-item strong {
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+
+.salary-progress-section {
+    margin-top: 22px;
+}
+
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 10px;
+}
+
+
+.salary-progress {
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.salary-progress-bar {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0d6efd,
+            #6f42c1
+        );
+}
+
+
+/* ========================================
+   EMPLOYEE OVERVIEW
+======================================== */
+
+.employee-overview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+
+    margin-top: 18px;
+}
+
+
+.overview-circle {
+    width: 135px;
+    height: 135px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #0d6efd 0deg 324deg,
+            rgba(255, 255, 255, 0.08) 324deg 360deg
+        );
+}
+
+
+.circle-inner {
+    width: 104px;
+    height: 104px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 50%;
+
+    background: #0d1b2a;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.circle-inner strong {
+    font-size: 24px;
+}
+
+.circle-inner span {
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 9px;
+}
+
+
+.overview-legend {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.legend-item {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+
+.legend-dot.active {
+    background: #0d6efd;
+
+    box-shadow:
+        0 0 10px rgba(13, 110, 253, 0.5);
+}
+
+
+.legend-dot.inactive {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.legend-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.legend-item strong {
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+.legend-item span {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 9px;
+}
+
+
+/* ========================================
+   RECENT EMPLOYEES
+======================================== */
+
+.recent-employees-card {
+    margin-bottom: 20px;
+}
+
+
+.view-all-button {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        rgba(13, 110, 253, 0.08);
+
+    color: #6ea8fe;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.view-all-button:hover {
+    background:
+        rgba(13, 110, 253, 0.16);
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.employee-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 18px;
+}
+
+
+.dashboard-employee-table {
+    width: 100%;
+
+    min-width: 650px;
+
+    border-collapse: collapse;
+}
+
+
+.dashboard-employee-table th {
+    padding: 10px 8px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    /* text-align: left; */
+}
+
+
+.dashboard-employee-table td {
+    padding: 12px 8px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.045);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+}
+
+
+.dashboard-employee-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+
+.dashboard-employee-table tbody tr:hover {
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+/* ========================================
+   EMPLOYEE INFO
+======================================== */
+
+.employee-info {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.employee-avatar {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    color: #9ec5fe;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(13, 110, 253, 0.18),
+            rgba(111, 66, 193, 0.18)
+        );
+
+    border:
+        1px solid rgba(110, 168, 254, 0.12);
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+.employee-info div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.employee-info strong {
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.employee-info span {
+    margin-top: 2px;
+
+    color: rgba(255, 255, 255, 0.30);
+
+    font-size: 8px;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status-badge {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+
+.active-status {
+    color: #7dd3a7;
+
+    background:
+        rgba(25, 135, 84, 0.10);
+}
+
+
+.inactive-status {
+    color: rgba(255, 255, 255, 0.45);
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+
+/* ========================================
+   LAPTOP
+======================================== */
+
+@media (max-width: 1200px) {
+
+    .dashboard-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-middle {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   SMALL LAPTOP / SHORT SCREEN
+======================================== */
+
+@media (max-height: 760px) and (min-width: 769px) {
+
+    .dashboard-header {
+        margin-bottom: 16px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+    h1 {
+    letter-spacing: 1.32px;
+    }
+
+    .dashboard-stats {
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-content {
+        margin-top: 12px;
+    }
+
+    .stat-content h2 {
+        font-size: 21px;
+    }
+
+    .dashboard-card {
+        padding: 16px;
+    }
+
+    .dashboard-middle {
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    .salary-content {
+        margin-top: 17px;
+    }
+
+    .employee-overview {
+        margin-top: 12px;
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-middle {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 576px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .dashboard-header p {
+        font-size: 11px;
+    }
+
+    .dashboard-date {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .salary-content {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-overview {
+        gap: 20px;
+    }
+
+    .overview-circle {
+        width: 115px;
+        height: 115px;
+    }
+
+    .circle-inner {
+        width: 88px;
+        height: 88px;
+    }
+}
+
+
+.td-position{
+    float: left;
+}
