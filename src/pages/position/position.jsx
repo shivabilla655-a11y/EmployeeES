@@ -8,7 +8,7 @@ import {
   deletePosition,
 } from "../../services/position.Service.js";
 
-import "./Position.css";
+import "./position.css";
 
 function Position() {
   // =========================================================

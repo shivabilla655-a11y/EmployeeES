@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Profile.css";
+import "./profile.css";
 
 const Profile = () => {
   const [editing, setEditing] = useState(false);

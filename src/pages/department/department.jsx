@@ -3,7 +3,7 @@ import { departmentService } from "../../services/depatment.Service.js";
 // import { ToastContainer, toast } from "react-toastify";
 import { toast } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
-import "./Department.css";
+import "./department.css";
 
 function Department() {
   // =========================================================

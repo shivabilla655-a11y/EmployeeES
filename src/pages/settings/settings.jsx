@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./Settings.css";
+import "./settings.css";
 
 const Settings = () => {
   // =========================================================
