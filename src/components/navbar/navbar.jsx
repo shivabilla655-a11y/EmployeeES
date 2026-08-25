@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { logoutUser } from "../../services/auth.Service.js";
+import { logoutUser } from "../../services/auth.service.js";
 import "./navbar.css";
  
 function Navbar() {
